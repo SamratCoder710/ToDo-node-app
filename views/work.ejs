@@ -1,0 +1,41 @@
+<%- include("partials/header.ejs") %>
+
+<div class="box">
+<% if(locals.workTask){ %>
+    
+ <% workTask.forEach(ele =>{ %>
+    <div class="item">
+        <input type="checkbox">
+        <p>
+            <%= ele %>
+        </p>
+      </div>
+  <%})%>
+  <%} %>
+  <form class="item" action="/workTask" method="post">
+    <div class="form-container">
+    <input type="text" name="newItem" placeholder="New Item" autocomplete="off">
+    <button type="submit" name="list" value="Work" list="">+</button>
+    
+</div>
+</form>
+
+</div>
+<script>
+    var buttons = document.querySelectorAll("input[type='checkbox']");
+    console.log(buttons);
+    if(buttons.length !== 0){
+        buttons.forEach(button => {
+            button.addEventListener("change",(evt)=>{
+             var divElement = evt.target.parentNode;
+             var paragraph = divElement.querySelector("p");
+             paragraph.classList.toggle("striked");
+        })
+       })
+    }
+    
+</script>
+
+
+
+<%- include("partials/footer.ejs") %>

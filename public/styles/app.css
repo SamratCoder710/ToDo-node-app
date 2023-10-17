@@ -1,0 +1,138 @@
+a{
+    text-decoration: none;
+    color:#551a8b;
+}
+a:active{
+    color:#551a8b;
+}
+.nav-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    color: #551a8b;
+    font-size:25px;
+    gap:3rem;
+    padding:1rem;
+}
+.nav-container>a{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-container img{
+    padding-right:0.2rem;
+}
+body{
+    background-color: #e4e9fd;
+    margin: 0;
+}
+.separator{
+    width: 0;
+    height: 0;
+    border-right:98vw solid transparent;
+    border-bottom: 20.9vw solid #a683e3;
+    /* margin-bottom: -13.9vw; */
+}
+
+input[type="text"] {
+    text-align: center;
+    height: 60px;
+    top: 10px;
+    border: none;
+    background: transparent;
+    font-size: 20px;
+    font-weight: 200;
+    width: 313px;
+}
+
+button {
+    min-height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    border-color: transparent;
+    background-color: #a683e3;
+    color: #fff;
+    font-size: 30px;
+    border-width: 0;
+}
+.form-container{
+    height:5rem;
+    width:100%;
+    border-radius: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.item {
+    min-height: 70px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #f1f1f1;
+}
+
+.box {
+    max-width: 400px;
+    margin: 50px auto;
+    background: white;
+    border-radius: 5px;
+    box-shadow: 5px 5px 15px -5px rgba(0, 0, 0, 0.3);
+}
+
+.date-box {
+    max-width: 300px;
+    color: #f1f1f1;
+    font-size: 2rem;
+    text-align: center;
+    padding: 10px 0 ;
+    margin: 5px auto;
+    background: #a683e3;
+    border-radius: 5px;
+    box-shadow: 5px 5px 15px -5px rgba(0, 0, 0, 0.3);
+}
+
+
+.design-box{
+    width:98vw;
+    height:10vh;
+    background-color: #a683e3;
+}
+.diagonal-ui{
+    position: fixed;
+    bottom:0;
+}
+
+input[type="checkbox"] {
+    margin: 20px;
+}
+
+.striked{
+    text-decoration: line-through;
+}
+main{
+    position: relative;
+    z-index: 100;
+}
+p {
+    margin: 0;
+    padding: 20px;
+    font-size: 20px;
+    /* font-weight: 200; */
+    color: #00204a;
+}
+
+footer{
+    position: fixed;
+    bottom:0px;
+    right:50vw;
+}
+
+@media(max-width:320px){
+    .nav-container{
+        flex-direction: column;
+    }
+    .nav-container>a{
+        justify-content: flex-start;
+    }
+}
+
